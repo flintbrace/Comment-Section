@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font: 12px 'calibri';
+    color: aliceblue;
+    padding: 1rem;
+    background-color: aliceblue;
+    background-image: url(/images/mobile1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    place-content: center;
+}
+
+@media screen and (min-width:500px) {
+    body {
+        font-size: 16px;
+        padding: 5rem;
+        background-image: url(/images/dextop2.jpg);
+    }
+}
+
+.top {
+    border: 1px solid rgba(192, 192, 192, 0.363);
+    border-radius: 10px;
+    backdrop-filter: grayscale();
+}
+
+.h11 {
+    text-align: center;
+}
+
+.h3 {
+    text-align: center;
+}
+
+
+.container {
+    max-width: 600px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h1 {
+    font-size: 1.2rem;
+    color: skyblue;
+}
+
+.deleteBtn {
+    color: crimson;
+    background: none;
+}
+
+.deleteBtn:hover {
+    filter: brightness(150%);
+}
+
+
+
+
+.comment-container {
+    display: none;
+    position: relative;
+}
+
+.comment-container::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: rgb(160, 160, 160);
+
+    left: -5px;
+}
+
+.comment-container {
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+.first {
+    margin-left: 0;
+}
+
+.comment-card {
+    backdrop-filter: blur(15px);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    border: .5px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(78, 78, 78, 0.123);
+}
+
+
+.time {
+    margin: .2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.time-time {
+    color: rgb(204, 204, 204);
+    ;
+    font-size: .7rem;
+}
+
+.addreply {
+    text-align: right;
+    color: rgb(0, 127, 218);
+    font-weight: 600;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+
+    color: rgb(204, 204, 204);
+}
+
+:is(.likes, .dislikes, .reply, .addreply):hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(82, 129, 151);
+}
+
+
+input,
+button {
+    font: inherit;
+    background: none;
+}
+
+
+.comment,
+.replyy {
+    font-weight: 700;
+    backdrop-filter: invert() blur(200px);
+    display: flex;
+    border: .5px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    overflow: hidden;
+    padding-left: .3rem;
+}
+
+.comment {
+    margin-left: 1rem;
+    margin-top: .3rem;
+
+}
+
+.replyy {
+    display: none;
+}
+
+
+
+input {
+    outline: none;
+    flex-grow: 1;
+    border: none;
+
+}
+
+button {
+    padding: 0.2rem .5rem;
+    background-color: rgb(91, 177, 252);
+    border: none;
+    cursor: pointer;
+}
+
+/* 
+.replyBtn {
+    font: inherit;
+    text-align: right;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+} */
+.flex {
+    display: flex;
+    opacity: 1;
+}
+
+.open {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.alert {
+    font-weight: 900;
+    transform: translateX(30px);
+    transition: transform .5s ease-out;
+}
+
+.blur {
+    filter: blur(1px);
+    transition: .1s;
+    border-color: red;
+}
+
+.blue {
+    border: 3px solid skyblue;
+    transition: border .2s;
+}
+
+.blue3 {
+    border: 2px solid skyblue;
+    transition: border .2s;
+}
+
+.blue1 {
+    border-radius: 10px;
+    border-right: 2px solid skyblue;
+    transition: border .2s;
+}
