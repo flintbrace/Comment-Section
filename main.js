@@ -498,36 +498,6 @@ function createReply2(theNR) {
 
 
 
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -558,80 +528,6 @@ reply.forEach(r => r.addEventListener("click", () => {
     imp.classList.toggle("flex")
 }))
 
-
-replyBtn.forEach(b => b.addEventListener("click", () => {
-    const newReply = document.createElement("div")
-    newReply.classList.add("comment-container", "open");
-    newReply.id = "second-reply"
-    inputRvalue = b.previousElementSibling.value;
-    const stringToInj = `
-    <div class="comment-card">
-    <h1 class="h1">New Reply</h1>
-    <p> ${inputRvalue} </p>
-    <p class="addreply">Reply</p>
-    <div class="replyy">
-        <input type="text" class="inputR">
-        <button class="send">Send</button>
-    </div>
-    <div class="card-footer">
-        <p class="likes">Likes</p>
-        <p class="dislikes">Dislikes</p>
-        <p class="reply">Replies 0</p>
-    </div>
-</div>`
-    if (inputRvalue === "") {
-        b.previousElementSibling.setAttribute("placeholder", "Type a reply")
-    } else {
-        newReply.innerHTML = stringToInj;
-        const perr = b.closest(".comment-container");
-        newReply.setAttribute(`dataset`, `${perr.id}`)
-        perr.append(newReply);
-
-    }
-    b.previousElementSibling.value = ""
-
-
-
-
-
-}))
-
-
-commentBtn.addEventListener("click", () => {
-
-
-
-    const newComment = document.createElement("div")
-    newComment.classList.add("comment-container", "open");
-    newComment.id = "second-comment"
-    inputCvalue = inputC.value;
-    const stringToInj = `
-        <div class="comment-card">
-        <h1 class="h1">New Commet</h1>
-        <p> ${inputCvalue} </p>
-        <p class="addreply">Reply</p>
-        <div class="replyy">
-            <input type="text" class="inputR">
-            <button class="send">Send</button>
-        </div>
-        <div class="card-footer">
-            <p class="likes">Likes</p>
-            <p class="dislikes">Dislikes</p>
-            <p class="reply">Replies 0</p>
-        </div>
-    </div>`
-
-    if (inputCvalue === "") {
-        commentBtn.previousElementSibling.setAttribute("placeholder", "Type a reply")
-    } else {
-        newComment.innerHTML = stringToInj;
-        container.append(newComment)
-    }
-    inputC.value = ""
-
-})
-
-
 showContainers.forEach(btn => {
     const parentcontainer = btn.closest(".comment-container")
     const _id = parentcontainer.id;
@@ -648,4 +544,4 @@ showContainers.forEach(btn => {
             childrenContainer.forEach(c => c.classList.toggle("open"))
         }
     })
-}) */
+})
