@@ -29,7 +29,6 @@ body {
 .top {
     border: 1px solid rgba(192, 192, 192, 0.363);
     border-radius: 10px;
-    backdrop-filter: grayscale();
 }
 
 .h11 {
@@ -148,7 +147,6 @@ button {
 .comment,
 .replyy {
     font-weight: 700;
-    backdrop-filter: invert() blur(200px);
     display: flex;
     border: .5px solid rgb(204, 204, 204);
     border-radius: 5px;
