@@ -12,7 +12,6 @@ body {
     color: aliceblue;
     padding: 1rem;
     background-color: aliceblue;
-    background-image: url(/images/mobile1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -24,7 +23,6 @@ body {
     body {
         font-size: 16px;
         padding: 5rem;
-        background-image: url(/images/dextop2.jpg);
     }
 }
 
